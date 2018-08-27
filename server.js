@@ -88,6 +88,15 @@ app.get('/',(req,res)=>{
     currentTime : new Date().toLocaleDateString()
   })
 })
+app.get('/about',(req,res)=>{
+  res.render('about.hbs',{
+    pagetitle : 'about page',
+    currentYear : new Date().getFullYear(),
+    passingName:'sharma'
+  })
+})
+
+
 
 app.listen(port,()=>{
   console.log('listening on port no ----',port);
